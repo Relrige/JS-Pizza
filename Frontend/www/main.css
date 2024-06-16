@@ -64,8 +64,12 @@ body {
 }
 
 .pizza-details {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    
+    /* display: grid;
+    grid-template-columns: repeat(2, 1fr); */
 }
 
 .detail-row {
@@ -125,7 +129,9 @@ body {
     color: black;
     margin-right: 5px;
 }
-
+.price{
+    min-width: 65px;
+}
 .detail-price {
     display: flex;
     flex-direction: column;
@@ -372,6 +378,12 @@ header span {
     .sidebar {
         width: 30%;
     }
+    #charts-top{
+        flex-direction: column;
+    }
+    #price-chart{
+        margin-top: 20px;
+    }
 }
 
 @media (max-width: 830px) {
@@ -425,6 +437,26 @@ header span {
     }
 
 }
+.go-back-button {
+    display: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 150px;
+    margin-left: 50px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.go-back-button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
 
 /************/
 
@@ -457,7 +489,20 @@ header span {
 
 }
 
-
+#charts{
+    display: none;
+    width: 66%;
+}
+#charts-top{
+    display: flex;
+    margin-top:100px;
+    margin-bottom:30px;
+    width: fit-content;
+}
+#back{
+    padding-top: 130px;
+    margin-left: 30px;
+}
 .order {
     width: 100%;
     padding: 0;
